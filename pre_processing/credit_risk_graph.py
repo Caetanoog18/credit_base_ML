@@ -67,7 +67,7 @@ class Graphs:
         # Generating a dynamic graph combining others parameters of database
         graph = px.scatter_matrix(self.credit_base, dimensions=["age", "income", "loan"], color="default")
         # Use xdg-open pre_processing/graphs/dynamic_graph to view this graph in an HTML page
-        graph.write_html(f"/home/gabriel-caetano/Desktop/Tensorflow/pre_processing/graphs/{name}.png")
+        graph.write_html(f"/home/gabriel-caetano/Desktop/Tensorflow/pre_processing/graphs/{name}.html")
         graph.show()
 
 
