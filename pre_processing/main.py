@@ -2,7 +2,7 @@ from tensorflow.python.ops.summary_ops_v2 import graph
 
 from pre_processing.census_database import CensusDatabase
 from pre_processing.census_graph import CensusGraph
-from pre_processing.handling_inconsistent_values import InconsistentValues
+from pre_processing.handling_inconsistent_values import InconsistentValues, Census
 from pre_processing.credit_risk_graph import *
 from pre_processing.census_database import *
 
@@ -30,4 +30,10 @@ census_database.statistics_census()
 census_graph = CensusGraph(file_path_census)
 census_graph.view_census_data("census_graph_income")
 census_graph.historian()
+
+census_graph = Census(file_path_census)
+census_graph.division_predictors_class_census()
+census_graph.label_encoder()
+census_graph.one_hot_encoder()
+census_graph.scaling_values()
 
